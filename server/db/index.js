@@ -17,13 +17,13 @@ const connection = mysql.createConnection({
 });
 
 
-
-connection.query(
-  'select * from users;',
-  (err, results, fields) => {
-    console.log(results);
-  }
-);
+// this is a test
+// connection.query(
+//   'select * from messages;',
+//   (err, results, fields) => {
+//     console.log(results);
+//   }
+// );
 
 module.exports = connection;
 
