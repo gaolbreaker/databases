@@ -13,20 +13,19 @@ var mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  database: 'test'
+  database: 'chat'
 });
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
-});
+
 
 connection.query(
-  'select * from testTable;',
+  'select * from users;',
   (err, results, fields) => {
     console.log(results);
-    //console.log(fields);
-    // console.log('Is this running?');
-    // Elbert, you need to remember to distinguish between the DATABASE and the TABLES
   }
 );
+
+module.exports = connection;
+
+// uses mysql npm module to connect to the database server running on the computer
+// Status: successfully connected
