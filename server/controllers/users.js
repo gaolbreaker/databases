@@ -7,9 +7,9 @@ module.exports = {
     });
   },
   post: function (req, res) {
-    var nameText = req.body.message;
+    var nameText = req.body.username;
     console.log(nameText);
-    models.messages.create(nameText).then( (data) => {
+    models.users.create(nameText).then( (data) => {
       console.log('New User Posted to DB Successfully!');
       //res.send(data);
     });
